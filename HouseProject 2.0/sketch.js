@@ -45,6 +45,7 @@ function draw() {
 
   if (stageNum == 4) {
     drawNeighbourhoodCC(150,600,500,400,255,0,0,0,0,0,0,255,0,0,0,255,100,100,100,100,0,100) // This is the input for drawNeighbourhoodCC
+    // Variables in order: far left X value, bottom y value, total length of house row, total height of house columns. Followed by RGB for each row.
     noLoop()
   }
 
