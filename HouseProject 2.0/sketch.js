@@ -8,6 +8,7 @@ function setup() {
   // put setup code here
   createCanvas(800,600);
   background(0);
+  frameRate(120)
 }
 
 function draw() {
