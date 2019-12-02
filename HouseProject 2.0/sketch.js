@@ -19,7 +19,7 @@ function draw() {
     rotate(random(-10,10))
     stroke(random(0,255),random(0,255),random(0,255),random(0,50))
     makeCircle1(random(275,325),random(275,325),random(1,3));
-    if (pointNum1 >= 1000) {
+    if (pointNum1 >= 750) {
       stageNum = 2;
     }
   }
@@ -30,7 +30,7 @@ function draw() {
     stroke(random(0,255),random(0,255),random(0,255),random(0,50))
     makeCircle2(random(250,350),random(250,350),random(1,3));
     makeCircle2(random(250,350),random(250,350),random(1,3));
-    if (pointNum2 >= 1000) {
+    if (pointNum2 >= 500) {
       stageNum = 3;
     }
   }
@@ -39,7 +39,7 @@ function draw() {
     strokeWeight(4);
     stroke(random(0,255),random(0,255),random(0,255),random(0,50))
     makeCircle3(random(0,800),random(0,600),random(1,3));
-    if (pointNum3 >= 1000) {
+    if (pointNum3 >= 500) {
       stageNum = 4;
     }
   }
