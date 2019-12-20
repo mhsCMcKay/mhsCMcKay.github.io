@@ -43,6 +43,8 @@ let bricks = [];
 function preload() {
   //Assign the image file to the variable
   img = loadImage('hammer.png');
+
+  beepSound = loadSound('beep.mp3')
 }
 
 
@@ -67,18 +69,18 @@ function draw() {
   if (level == 4) {
     background(0);      // Alligns Instructions and Title
     fill(255);
-    textAllign(CENTER, CENTER);
-    textSize(32);
-    text('INSTRUCTIONS', width/2, height/2)
-
+    textAlign(CENTER, CENTER);
+    textSize(38);
+    text('INSTRUCTIONS', width/2, height/2-50)
+    textSize(26)
     text('LEFT ARROW ---> Move Left \n RIGHT ARROW ---> Move Right \n UP ARROW ---> Increase Angle \n DOWN ARROW ---> Decrease LEFT_ARROW',width/2, height/2+50);
     // Text that explains Game
-    text('Press enter to Play', width/2, height/2+100);
+    text('Press enter to Play', width/2, height/2+200);
 
     // if Enter is pressed, move to first level
     if (keyIsDown(ENTER)) {
       playerSize = 80;
-      level+=1;
+      level = 1;
       ballX = 300;
       ballY = 300;
       playerX = 400
@@ -110,11 +112,11 @@ function draw() {
     text('Demolitionist', width/2, height/2);
 
     textSize(16);
-    text('You are a Demolitionist. See how many levels of bricks you can defeat without loosing your hammer! \n Press TAB for instructions', width/2, height/2+50);
+    text('You are a Demolitionist. See how many levels of bricks you can defeat without loosing your hammer! \n Press SPACE for instructions', width/2, height/2+50);
     text('Press enter to Play', width/2, height/2+100);
 
     // if Tab is pressed, move to INSTRUCTIONS level
-    if (keyIsDown(9)) {
+    if (keyIsDown(32)) {
       level = 4;
     }
 
@@ -260,6 +262,7 @@ function draw() {
       ySpeed = changingYSpeed;
       xSpeed = changingXSpeed;
       ySpeed = -ySpeed;
+      beepSound.play();
     }
 
     // makes the ball bounce off the player. It also sets the ball speed to be equal to the amount set by the player.
