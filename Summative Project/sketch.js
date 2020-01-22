@@ -726,12 +726,27 @@ function Player(){ // player function
   }
 
   this.movement = function(){ // Movement checks
+    if (this.x > 800) {
+      this.x = 800;
+    }
+    if (this.x < 0) {
+      this.x = 0;
+    }
+    if (this.y > 800) {
+      this.y = 800
+    }
+    if (this.y < 0) {
+      this.y = 0
+    }
+
     if (keyIsDown(LEFT_ARROW)) { // if you're pressing left, it sets your direction to left and moves you to the left by your speed.
+
       this.x = this.x - this.speed
       direction = 'left'
       // NOTE: So that I would have to use less sprites (And to save time), you can only move in one direction at a time.
       // When pushing all directions at once, you will automatically be forced to go left.
     } else if (keyIsDown(RIGHT_ARROW)) { // if you're pressing right, it sets your direction to right and moves you to the right by your speed.
+
       this.x = this.x + this.speed
       direction = 'right'
 
