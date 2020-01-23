@@ -79,7 +79,7 @@ function setup() {
   createCanvas(800,800);
 
   player = new Player(); // Creates a new player on game setup
-
+}
 
 function draw() {
   backgroundMusic.playMode('untilDone')
@@ -120,7 +120,8 @@ function draw() {
       player.x = width/2 // Puts the player back in the center of the screen
       player.y = height/2 // Puts the player back in the center of the screen
       enemy = []; // Clears all enemies
-      level = 1; // Finally, it starts the game againi
+      ammo = 4; // Fills your ammo
+      level = 1; // Finally, it starts the game again
     }
   }
 //-----------------You lost Screen End--------//
